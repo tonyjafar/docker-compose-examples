@@ -1,0 +1,13 @@
+version: '3'
+services:
+  selenium_grid:
+    privileged: true
+    container_name: tony_grid
+    build: ./build
+    ports:
+      - "4444:4444"
+    volumes:
+      - ./src/selenium-server-standalone-3.141.59.jar:/opt/selenium/selenium-server-standalone-3.141.59.jar
+      - ./src/geckodriver:/usr/bin/geckodriver
+      - ./src/chromedriver:/usr/bin/chromedriver
+      

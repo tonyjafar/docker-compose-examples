@@ -1,0 +1,14 @@
+version: '3'
+services:
+  apache_modsecurity:
+    container_name: tony_apache
+    build: ./build
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./src/httpd.conf:/apache/conf/httpd.conf
+      - ./src/mysitename.key:/etc/ssl/private/server.key
+      - ./src/mysitename.crt:/etc/ssl/certs/cert.pem
+      - ./logs:/apache/logs
+      - ./audit:/apache/audit

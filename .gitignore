@@ -1,0 +1,6 @@
+.DS_Store
+logs/
+audit/
+mysitename.crt
+mysitename.key
+
