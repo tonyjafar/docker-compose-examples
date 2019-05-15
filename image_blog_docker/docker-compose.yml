@@ -16,7 +16,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${mysql_pass}
       - MYSQL_DATABASE=image_blog
     volumes:
-      - ./dumb:/docker-entrypoint-initdb.d
+      - ./dump:/docker-entrypoint-initdb.d
 
   image_blog:
     container_name: image_blog_con
