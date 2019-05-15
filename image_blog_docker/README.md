@@ -1,4 +1,5 @@
 ## Steps to start the Stack:
+refer to [Image_blog_go](https://github.com/tonyjafar/Image_blog_go) for more info
 
 ```
 # clone the repo
