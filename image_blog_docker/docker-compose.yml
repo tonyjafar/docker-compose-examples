@@ -35,5 +35,6 @@ services:
      - mysql_con
     volumes:
       - image_blog_data:/go/Image_blog_go/data
+      - ./logs:/go/Image_blog_go/logs
 volumes:
   image_blog_data:
