@@ -3,4 +3,4 @@ logs/
 audit/
 mysitename.crt
 mysitename.key
-
+.idea/
