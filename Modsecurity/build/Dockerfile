@@ -1,7 +1,7 @@
 FROM debian:latest
 ARG apr_ver=1.6.5
 ARG apr_util_ver=1.6.1
-ARG apache_ver=2.4.37
+ARG apache_ver=2.4.38
 ARG mod_ver=2.9.3
 ARG rule_ver=3.1.0
 RUN apt-get update && apt-get upgrade -y && apt-get install -y wget libapr1 libapr1-dev build-essential expat libexpat1-dev libpcre3-dev libssl-dev \
