@@ -10,7 +10,7 @@ RUN apt-get update \
     github.com/go-sql-driver/mysql \
     github.com/op/go-logging \
     github.com/disintegration/imaging \
-    github.com/satori/go.uuid \
+    github.com/gofrs/uuid \
     golang.org/x/crypto/bcrypt \
     && git clone https://github.com/tonyjafar/Image_blog_go.git \
     && cd Image_blog_go \
