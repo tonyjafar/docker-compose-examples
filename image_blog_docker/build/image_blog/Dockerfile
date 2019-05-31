@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y git wget \
     && go get github.com/graphql-go/graphql \
     github.com/go-sql-driver/mysql \
-    github.com/op/go-logging \
+    gopkg.in/natefinch/lumberjack.v2 \
     github.com/disintegration/imaging \
     github.com/gofrs/uuid \
     golang.org/x/crypto/bcrypt \
