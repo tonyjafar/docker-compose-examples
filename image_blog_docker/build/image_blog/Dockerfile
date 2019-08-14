@@ -18,7 +18,6 @@ RUN apt-get update \
     && echo '{\n\t"username": "user_init",\n\t"password": "pass_init",\n\t"ipaddress": "mysql_con",\n\t"port": "3306",\n\t"database": "image_blog"\n}' >> conf.json \
     && sed -i  "s/\"username\": \"user_init\",/\"username\": \"$mysql_user\",/g" conf.json \
     && sed -i  "s/\"password\": \"pass_init\",/\"password\": \"$mysql_pass\",/g" conf.json \
-    && mkdir -p data/thumb && mkdir data/videos \
     && go build \
     && wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh \
     && chmod +x wait-for-it.sh

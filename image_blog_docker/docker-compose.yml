@@ -34,7 +34,9 @@ services:
     links:
      - mysql_con
     volumes:
-      - image_blog_data:/go/Image_blog_go/data
+      - ./image_blog_data/photos:/go/Image_blog_go/data
+      - ./image_blog_data/thumb:/go/Image_blog_go/data/thumb
+      - ./image_blog_data/videos:/go/Image_blog_go/data/videos
       - ./logs:/go/Image_blog_go/logs
 volumes:
   image_blog_data:

@@ -1,6 +1,7 @@
 .DS_Store
 logs/
 audit/
+image_blog_data/
 mysitename.crt
 mysitename.key
 .idea/
