@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:latest as builder
 
 ARG mysql_user
 ARG mysql_pass
@@ -22,6 +22,12 @@ RUN apt-get update \
     && wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh \
     && chmod +x wait-for-it.sh
 
+FROM debian:10-slim
 EXPOSE 8000
 WORKDIR /go/Image_blog_go
+COPY --from=builder /go/Image_blog_go/Image_blog_go .
+COPY --from=builder /go/Image_blog_go/wait-for-it.sh .
+COPY --from=builder /go/Image_blog_go/conf.json .
+COPY --from=builder /go/Image_blog_go/templates/* templates/
+COPY --from=builder /go/Image_blog_go/static/* static/
 CMD [ "./Image_blog_go" ]
