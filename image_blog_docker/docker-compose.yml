@@ -38,5 +38,4 @@ services:
       - ./image_blog_data/thumb:/go/Image_blog_go/data/thumb
       - ./image_blog_data/videos:/go/Image_blog_go/data/videos
       - ./logs:/go/Image_blog_go/logs
-volumes:
-  image_blog_data:
+
