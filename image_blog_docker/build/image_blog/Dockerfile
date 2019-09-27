@@ -28,6 +28,6 @@ WORKDIR /go/Image_blog_go
 COPY --from=builder /go/Image_blog_go/Image_blog_go .
 COPY --from=builder /go/Image_blog_go/wait-for-it.sh .
 COPY --from=builder /go/Image_blog_go/conf.json .
-COPY --from=builder /go/Image_blog_go/templates/* templates/
-COPY --from=builder /go/Image_blog_go/static/* static/
+COPY --from=builder /go/Image_blog_go/templates templates
+COPY --from=builder /go/Image_blog_go/static static
 CMD [ "./Image_blog_go" ]
