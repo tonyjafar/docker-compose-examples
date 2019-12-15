@@ -12,4 +12,4 @@ $docker-compose stop
 #start again
 $docker-compose start
 ```
-then you can access ther server in browser http://localhost:8000
+then you can access ther server in browser http://localhost:8000 with default admin user with password 'Admin1!'
