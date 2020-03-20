@@ -30,7 +30,7 @@ services:
      - "8000:8000"
     depends_on:
      - mysql_con
-    command: ["/go/Image_blog_go/wait-for-it.sh", "mysql_con:3306", "-t", "60", "--", "/go/Image_blog_go/Image_blog_go"]
+    command: ["/go/Image_blog_go/wait-for-it.sh", "mysql_con:3306", "-t", "60", "--", "/go/Image_blog_go/image_blog"]
     links:
      - mysql_con
     volumes:
