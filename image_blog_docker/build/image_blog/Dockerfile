@@ -15,7 +15,7 @@ RUN apt-get update \
     && git clone https://github.com/tonyjafar/Image_blog_go.git \
     && cd Image_blog_go \
     && touch conf.json \
-    && echo '{\n\t"username": "user_init",\n\t"password": "pass_init",\n\t"ipaddress": "mysql_con",\n\t"port": "3306",\n\t"database": "image_blog"\n}' >> conf.json \
+    && printf '{\n\t"username": "user_init",\n\t"password": "pass_init",\n\t"ipaddress": "mysql_con",\n\t"port": "3306",\n\t"database": "image_blog"\n}' >> conf.json \
     && sed -i  "s/\"username\": \"user_init\",/\"username\": \"$mysql_user\",/g" conf.json \
     && sed -i  "s/\"password\": \"pass_init\",/\"password\": \"$mysql_pass\",/g" conf.json \
     && go build \
