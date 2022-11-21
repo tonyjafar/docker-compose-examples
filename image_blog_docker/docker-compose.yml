@@ -26,6 +26,10 @@ services:
      args:
       - mysql_user
       - mysql_pass
+      - s3_bucket
+      - aws_region
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
     ports:
      - "8000:8000"
     depends_on:
